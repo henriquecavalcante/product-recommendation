@@ -6,7 +6,7 @@ var express = require('express'),
   bodyParser = require('body-parser');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/db');
+mongoose.connect('mongodb://localhost/linx');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -15,13 +15,14 @@ var routes = require('./api/routes/product-routes');
 routes(app);
 
 app.listen(port);
+console.log('Product Recommendation System RESTful API server started on: ' + port);
 
-console.log('Reset product collection')
-Product.collection.drop();
+if (Product.collection.count()){
+    Product.collection.drop();
+    console.log('Reset product collection')
+}
 
 var json_data = require('./mock/products.json');
 Product.collection.insertMany(json_data, function(err,r){
-  console.log('Inserted ' + r.insertedCount + ' products')
+  console.log('Created ' + r.insertedCount + ' products')
 });
-
-console.log('Product Recommendation System RESTful API server started on: ' + port);
