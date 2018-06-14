@@ -11,7 +11,7 @@ Product Recommendation API
 
 ## Dependencies Installation Instructions
 
-Open command prompt and got to the folder you cloned the project, for example:
+Open command prompt and go to the folder you cloned the project, for example:
 
 ```
 cd "C:\Projects\product-recommendation"
