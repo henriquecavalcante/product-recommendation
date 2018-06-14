@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Black';
+    src: url("/fonts/Roboto-Black.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid #D5D9DC;
+}
+
+.title {
+    font-size: 14px;
+    color: #006699;
+    background: linear-gradient(#EFF7FE, #E5F1FB);
+    height: 32px;
+    min-width: 100%;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.visited-title {
+    min-width: 25%;
+    padding-top: 8px;
+    padding-left: 8px;
+    display: inline;
+    float: left;
+}
+
+.recommendation-title {
+    min-width: 75%;
+    padding-top: 8px;
+}
+
+.bottom-gradient {
+    background: linear-gradient(#FFFFFF, #EFF7FE);
+    height: 30px;
+    min-width: 100%;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.visited {
+    border-right: 1px solid #EEEEEE;
+    max-width: 25%;
+    float: left;
+}
+
+.recommendations {
+    max-width: 65%;
+    float: right;
+    margin-right: 5%
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.product-info {
+    font-size: 10px;
+    margin: 12px;
+}
+
+.image {
+    text-align: center;
+}
+
+.description {
+    overflow: hidden;
+    position: relative;
+    line-height: 1.2em;
+    max-height: 3.6em;
+    text-align: justify;
+    margin-right: -1em;
+    padding-right: 1em;
+}
+
+.description:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.description:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: white;
+}
+
+.price,
+.payment,
+.old-price {
+    margin-top: 4px;
+}
+
+.price,
+.payment,
+.tax {
+    color: #CE0000;
+}
+
+.payment,
+.value {
+    font-family: 'Roboto Black';
+}
+
+.value {
+    font-size: 14px;
+}
+
+.slick-prev:before {
+    color: #074C8D;
+}
+
+.slick-next:before {
+    color: #074C8D;
+}

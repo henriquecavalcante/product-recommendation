@@ -22,11 +22,14 @@
     "url": "https://github.com/henriquecavalcante/product-recommendation/issues"
   },
   "homepage": "https://github.com/henriquecavalcante/product-recommendation#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
     "express": "^4.16.3",
-    "mongodb": "^3.0.10",
-    "mongoose": "^5.1.5"
+    "mongoose": "^5.1.5",
+    "request": "^2.87.0"
   }
 }

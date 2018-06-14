@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recomendação de Produtos</title>
+    <link rel="stylesheet" type="text/css" href="/vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/vendor/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <div class="visited-title">Você visitou:</div>
+            <div class="recommendation-title">e talvez se interesse por:</div>
+        </div>
+        <div class="row">
+            <div class="visited">
+                <div class="product-info">
+                    <div class="image"><img width="100px" src="http:<%= product[0].imageName %>"></div>
+                    <div class="description"><%= product[0].name %></div>
+                    <%if (product[0].oldPrice!=null) { %>
+                        <div class="old-price">De: <%= product[0].oldPrice %></div>
+                    <% } %>
+                    <div class="price">Por: <span class="value"><%= product[0].price %></span></div>
+                    <div class="payment"><%= product[0].paymentConditions %></div>
+                    <div class="tax">sem juros</div>
+                </div>
+            </div>
+            <div class="recommendations">
+                <div class="responsive">
+                    <% for (var i=0; i < product[0].recommendation.length; i++) { %>
+                        <div class="product-info">
+                            <div class="image"><img width="100px" src="http:<%= product[0].recommendation[i].imageName %>"></div>
+                            <div class="description"><%= product[0].recommendation[i].name %></div>
+                            <%if (product[0].recommendation[i].oldPrice!=null) { %>
+                                <div class="old-price">De: <%= product[0].recommendation[i].oldPrice %></div>
+                            <% } %>
+                            <div class="price">Por: <span class="value"><%= product[0].recommendation[i].price %></span></div>
+                            <div class="payment"><%= product[0].recommendation[i].paymentConditions %></div>
+                            <div class="tax">sem juros</div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-gradient"></div>
+    </div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="/vendor/slick/slick.min.js"></script>
+    <script type="text/javascript" src="/js/scripts.js"></script>
+</body>
+</html>
